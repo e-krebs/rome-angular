@@ -1,4 +1,4 @@
-angular.module('rome-angular', [])
+angular.module('rome-angular', []);
 angular.module('rome-angular')
     .directive('rome', romeDirective);
 
@@ -21,7 +21,7 @@ function romeDirective (romeConfigProvider) {
                 for (var item in scope.romeOptions) {
                     if (scope.romeOptions.hasOwnProperty(item)) this.options[item] = scope.romeOptions[item];
                 }
-            };
+            }
             // getting the initialValue, priority being :
             // 1. from options (i.e. via romeConfigProvider or via romeOptions)
             // 2. from scope.rome
@@ -75,7 +75,7 @@ function romeConfigProvider() {
     // storing rome default options values
     this.setDefaults = function (options) {
         this.defaults = options;
-    }
+    };
 
-    this.$get = function () { return this; }
+    this.$get = function () { return this; };
 }

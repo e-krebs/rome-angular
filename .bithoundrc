@@ -50,11 +50,11 @@
     "**/spec/**",
     "**/specs/**"
   ],
-  "dependencies" : [
+  "dependencies" : {
     "unused-ignores": [
         "rome",
         "moment",
         "angular"
         ]
-  ]
+    }
 }
