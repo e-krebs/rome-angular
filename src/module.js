@@ -1,1 +1,1 @@
-angular.module('rome-angular', [])
+angular.module('rome-angular', []);

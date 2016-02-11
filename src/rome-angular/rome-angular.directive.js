@@ -20,7 +20,7 @@ function romeDirective (romeConfigProvider) {
                 for (var item in scope.romeOptions) {
                     if (scope.romeOptions.hasOwnProperty(item)) this.options[item] = scope.romeOptions[item];
                 }
-            };
+            }
             // getting the initialValue, priority being :
             // 1. from options (i.e. via romeConfigProvider or via romeOptions)
             // 2. from scope.rome
