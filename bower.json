@@ -4,6 +4,18 @@
     "description": "AngularJS wrapper for rome",
     "license": "MIT",
     "homepage": "https://github.com/e-krebs/rome-angular",
+    "ignore": [
+        "example",
+        "node_modules",
+        "src",
+        "test",
+        "typings",
+        "bower_components",
+        ".*",
+        "gulpfile.js",
+        "karma.conf.js",
+        "package.json"
+    ],
     "main": "dist/rome-angular.js",
     "authors": [
         "Emmanuel Krebs"
@@ -16,11 +28,11 @@
     ],
     "repository": {
         "type" : "git",
-        "url" : "https://github.com/e-krebs/rome-angular"
+        "url" : "https://github.com/e-krebs/rome-angular.git"
     },
     "dependencies": {
-        "angular": "^1.4.9",
-        "moment": "^2.11.2",
-        "rome": "^2.1.22"        
+        "angular": "1.4.9",
+        "moment": "2.11.2",
+        "rome": "2.1.22"        
     }
 }
