@@ -1,0 +1,26 @@
+{
+    "name": "rome-angular",
+    "version": "1.0.0",
+    "description": "AngularJS wrapper for rome",
+    "license": "MIT",
+    "homepage": "https://github.com/e-krebs/rome-angular",
+    "main": "dist/rome-angular.js",
+    "authors": [
+        "Emmanuel Krebs"
+    ],
+    "keywords": [
+        "angular",
+        "angularjs",
+        "rome",
+        "calendar"
+    ],
+    "repository": {
+        "type" : "git",
+        "url" : "https://github.com/e-krebs/rome-angular"
+    },
+    "dependencies": {
+        "angular": "^1.4.9",
+        "moment": "^2.11.2",
+        "rome": "^2.1.22"        
+    }
+}

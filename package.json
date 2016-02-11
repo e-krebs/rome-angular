@@ -1,0 +1,41 @@
+{
+    "name": "rome-angular",
+    "version": "1.0.0",
+    "description": "AngularJS wrapper for rome",
+    "license": "MIT",
+    "homepage": "https://github.com/e-krebs/rome-angular",
+    "main": "dist/rome-angular.js",
+    "author": {
+        "name" : "Emmanuel Krebs",
+        "url" : "https://github.com/e-krebs"
+    },
+    "keywords": [
+        "angular",
+        "angularjs",
+        "rome",
+        "calendar"
+    ],
+    "repository": {
+        "type" : "git",
+        "url" : "https://github.com/e-krebs/rome-angular"
+    },
+    "dependencies": {
+        "angular": "^1.4.9",
+        "moment": "^2.11.2",
+        "rome": "^2.1.22"        
+    },
+    "devDependencies": {
+        "angular-mocks": "^1.4.9",
+        "gulp": ">=3.9.0",
+        "gulp-concat": ">=2.6.0",
+        "gulp-ng-annotate": ">=1.1.0",
+        "gulp-rename": ">=1.2.2",
+        "gulp-sourcemaps": ">=1.6.0",
+        "gulp-uglify": ">=1.5.1",
+        "jasmine-core": "^2.4.1",
+        "karma": "^0.13.19",
+        "karma-jasmine": "^0.3.7",
+        "karma-phantomjs-launcher": "^1.0.0",
+        "phantomjs-prebuilt": "^2.1.3"
+    }
+}
