@@ -1,5 +1,13 @@
 # rome-angular
-> rome-angular is a simple [`angular`][1] directive for [`rome`][2]. Rome is a customizable date _(and time)_ picker, no jQuery !
+[![bitHound Overall Score](https://www.bithound.io/github/e-krebs/rome-angular/badges/score.svg)](https://www.bithound.io/github/e-krebs/rome-angular)
+[![Bower version](https://badge.fury.io/bo/rome-angular.svg)](https://badge.fury.io/bo/rome-angular)
+
+> rome-angular is a simple yet _powerfull_ [`angular`][1] directive for [`rome`][2].
+>
+> [`rome`][2] is a customizable date _(and time)_ picker, no jQuery !
+
+## Demo
+Live demo here http://e-krebs.github.io/rome-angular/
 
 ## Install
 From bower
