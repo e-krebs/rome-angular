@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>example</title>
+	<link href="rome.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div ng-app="testApp">
+		<div ng-controller="testController as ctrl">
+            <h1>Example 1 : date in english</h1>
+            <p>
+                Rome options are kept to default
+            </p>
+            <hr/>
+			<div>
+				<div>Rome on a div :</div>
+				<div rome="ctrl.date" rome-change="ctrl.changed()"></div>
+			</div>
+            <br/>
+			<div style="margin-top:25px">
+				<div>Rome on a textbox :</div>
+				<input type="text" class="mdl" rome="ctrl.date" rome-change="ctrl.changed()">
+                <button class="mdl" ng-click="ctrl.addOneDay()">add one day</button>
+			</div>
+            <br/>
+            <span ng-bind="ctrl.message" class="error"></span>
+		</div>
+	</Div>
+	<script type="text/javascript" src="scripts/rome.min.js"></script>
+	<script type="text/javascript" src="scripts/angular.min.js"></script>
+	<script type="text/javascript" src="scripts/rome-angular.min.js"></script>
+	<script type="text/javascript">
+		angular.module('testApp', ['rome-angular'])
+            .controller('testController', TestController);
+            
+            TestController.$inject = ['$timeout'];
+		
+		function TestController($timeout) {
+			var vm = this;
+            
+            function changed () {
+                vm.message = 'date has changed to : ' + vm.date;
+                $timeout(function() { vm.message = '' }, 1000);
+			}
+            
+            function addOneDay() {
+                vm.date.setDate(vm.date.getDate()+1);
+            }
+            
+			vm.date = new Date();
+            vm.message = '';
+			vm.changed = changed;
+            vm.addOneDay = addOneDay;
+		}
+	</script>
+</body>

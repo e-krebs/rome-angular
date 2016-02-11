@@ -1,0 +1,141 @@
+body {
+    font-size: 1em;
+    font-family: 'Helvetica','Arial',sans-serif;
+    color: rgba(117, 117, 117, 1)
+}
+
+.rd-container {
+    display: none;
+    border: 1px solid rgba(0,0,0,.1);
+    background-color: rgba(250, 250, 250, 1);
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.rd-container-attachment {
+    position: absolute;
+}
+.rd-month {
+    display: inline-block;
+    margin-right: 0;
+}
+.rd-back,
+.rd-next {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+.rd-back[disabled],
+.rd-next[disabled] {
+    cursor: default;
+}
+.rd-back {
+    float: left;
+}
+.rd-next {
+    float: right;
+}
+.rd-back:before {
+    display: block;
+    content: '\2190';
+}
+.rd-next:before {
+    display: block;
+    content: '\2192';
+}
+.rd-day-head,
+.rd-day-body {
+    padding: 8px 6px;
+    width: 22px;
+    height: 18px;
+}
+.rd-day-body {
+    cursor: pointer;
+    text-align: center;
+    color: rgba(63, 81, 181, 1);
+}
+.rd-day-body:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 64, 129, 0.5);
+    border-radius: 50%;
+}
+.rd-day-selected,
+.rd-time-selected,
+.rd-time-option:hover {
+    cursor: pointer;
+    background-color: rgba(63, 81, 181, 1);
+    color: rgba(255, 255, 255, 1);
+}
+.rd-time-option:hover {
+    background-color: rgba(63, 81, 181, 0.5);    
+}
+.rd-day-selected {
+    border-radius: 50%;
+    background-color: rgba(255, 64, 129, 1);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.rd-day-prev-month,
+.rd-day-next-month {
+    color: rgba(117, 117, 117, 0.5);
+}
+.rd-day-disabled {
+    cursor: default;
+    color: rgba(63, 81, 181, 0.5);
+}
+.rd-time {
+    position: relative;
+    display: inline-block;
+    margin-top: 8px;
+    min-width: 80px;
+}
+.rd-time-list {
+    display: none;
+    position: absolute;
+    overflow-y: scroll;
+    max-height: 160px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    color: #333;
+}
+.rd-time-selected {
+    padding: 8px;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.rd-time-option {
+    padding: 8px;
+}
+.rd-day-concealed {
+    visibility: hidden;
+}
+
+button.mdl {
+    padding: 0 16px;
+    background-color: rgba(63, 81, 181, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 36px;
+}
+input[type="text"].mdl {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    font-size: 1rem;
+    padding: 4px 0;
+    color: rgba(117, 117, 117, 1);
+    outline: none;
+    vertical-align: bottom;
+}
+input[type="text"].mdl:focus {
+    border-bottom: 2px solid rgba(63, 81, 181, 1);
+}
+.error {
+    color: rgba(255, 64, 129, 1);
+}

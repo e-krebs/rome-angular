@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>example in french</title>
+	<link href="rome.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div ng-app="testApp">
+		<div ng-controller="testController as ctrl">
+            <h1>Example 2 : date in french</h1>
+			<p>
+                Rome's default options are set via a configProvider :
+                <ul>
+                    <li>week starts on Monday</li>
+                    <li>date format : DD/MM/YYYY HH:mm:ss</li>
+                </ul>
+                Moment's French locale is used
+			</p>
+            <hr/>
+			<div style="margin-top:25px">
+				<div>Rome on a div :</div>
+				<div rome="ctrl.date" rome-change="ctrl.changed()"></div>
+			</div>
+            <br/>
+			<div style="margin-top:25px">
+				<div>Rome on a textbox :</div>
+				<input type="text" class="mdl" rome="ctrl.date" rome-change="ctrl.changed()">
+			</div>
+            <br/>
+			<div style="margin-top:25px">
+				<div>
+					Rome on a textbox +<br/>
+                    Rome's configProvider options are overriden through rome-options :
+                    <ul>
+                        <li>week starts on Sunday</li>
+                        <li>date format : DD-MM-YYYY, HH:mm</li>
+                    </ul>
+				</div>
+				<input type="text" class="mdl" rome="ctrl.date" rome-change="ctrl.changed();" rome-options="{ inputFormat: 'DD-MM-YYYY, HH:mm', weekStart: 0}">
+			</div>
+            <br/>
+            <span ng-bind="ctrl.message" style="color: red"></span>
+		</div>
+	</Div>
+	<script type="text/javascript" src="scripts/moment.min.js"></script>
+	<script type="text/javascript" src="scripts/fr.js"></script>
+	<script type="text/javascript" src="scripts/rome.standalone.min.js"></script>
+	<script type="text/javascript" src="scripts/angular.min.js"></script>
+	<script type="text/javascript" src="scripts/rome-angular.min.js"></script>
+	<script type="text/javascript">
+		angular.module('testApp', ['rome-angular'])
+            .config(romeConfig)
+            .controller('testController', TestController);
+
+        TestController.$inject = ['$timeout'];
+
+		function romeConfig(romeConfigProvider) {
+			romeConfigProvider.setDefaults({
+				weekStart: 1,
+				inputFormat: 'DD/MM/YYYY HH:mm:ss'
+			});
+		}
+		
+		function TestController($timeout) {
+			var vm = this;
+            
+            function changed () {
+                vm.message = 'date has changed to : ' + vm.date;
+                $timeout(function() { vm.message = '' }, 1000);
+			}
+            
+			vm.date = new Date();
+            vm.message = '';
+			vm.changed = changed;
+		}
+	</script>
+</body>
