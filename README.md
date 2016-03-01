@@ -1,4 +1,5 @@
 # rome-angular
+![Build status](https://travis-ci.org/e-krebs/rome-angular.svg?branch=master)
 [![bitHound Overall Score](https://www.bithound.io/github/e-krebs/rome-angular/badges/score.svg)](https://www.bithound.io/github/e-krebs/rome-angular)
 [![Bower version](https://badge.fury.io/bo/rome-angular.svg)](https://badge.fury.io/bo/rome-angular)
 
