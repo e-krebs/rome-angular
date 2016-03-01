@@ -29,3 +29,5 @@ gulp.task('watch', ['test', 'build'], function () {
   gulp.watch('src/**/*.js', ['test', 'build']);
   gulp.watch('test/**/*.js', ['test']);
 });
+
+gulp.task('default', ['test', 'build']);
