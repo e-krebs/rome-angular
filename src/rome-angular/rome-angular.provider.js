@@ -1,11 +1,11 @@
 angular.module('rome-angular')
-    .provider('romeConfig', romeConfigProvider);
+  .provider('romeConfig', romeConfigProvider);
 
 function romeConfigProvider() {
-    // storing rome default options values
-    this.setDefaults = function (options) {
-        this.defaults = options;
-    };
+  // storing rome default options values
+  this.setDefaults = function(options) {
+    this.defaults = options;
+  };
 
-    this.$get = function () { return this; };
+  this.$get = function() { return this; };
 }
