@@ -7,7 +7,7 @@ var rename = require('gulp-rename');
 var karma = require('karma');
 
 gulp.task('build', function() {
-  gulp.src(['src/**/module.js', 'src/**/*.js'])
+  return gulp.src(['src/**/module.js', 'src/**/*.js'])
     .pipe(concat('rome-angular.js'))
     .pipe(gulp.dest('dist/'))
     .pipe(ngAnnotate())
@@ -25,9 +25,9 @@ gulp.task('test', function(done) {
   }, done).start();
 });
 
-gulp.task('watch', ['test', 'build'], function() {
+gulp.task('watch', gulp.parallel('test', 'build'), function() {
   gulp.watch('src/**/*.js', ['test', 'build']);
   gulp.watch('test/**/*.js', ['test']);
 });
 
-gulp.task('default', ['test', 'build']);
+gulp.task('default', gulp.parallel('test', 'build'));
