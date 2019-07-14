@@ -71,16 +71,12 @@ describe('rome-angular', function() {
 
     describe('with custom configuration', function() {
       beforeEach(inject(function($rootScope, $compile, _romeConfig_) {
-        //jscs:disable maximumLineLength
         input = angular.element('<input type="text" rome="date" rome-options="{inputFormat: \'DD-MM-YYYY, HH.mm\'}"></input>');
-        //jscs:enable
         input = $compile(input)(scope);
         $rootScope.$digest();
       }));
 
-      //jscs:disable maximumLineLength
       it('(input with custom configuration) should display date as DD-MM-YYYY HH.mm',
-        //jscs:enable
         function() {
           expect(input.val()).toEqual('16-10-1982, 07.22');
         });

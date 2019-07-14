@@ -1,25 +1,4 @@
 {
-  // jscs configuration
-  "jscs.configuration": {
-    "excludeFiles": [
-      ".**",
-      "dist/**"
-    ],
-    "preset": "google",
-    "validateQuoteMarks": "'",
-    "disallowVar": false,
-    "requireSpacesInAnonymousFunctionExpression": {
-      "beforeOpeningCurlyBrace": true
-    },
-    "jsDoc": {
-      "checkAnnotations": {
-        "preset": "closurecompiler",
-        "extra": {
-          "callback": true
-        }
-      }
-    }
-  },
   // eslint options
   "eslint.options": {
     "env": {
