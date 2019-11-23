@@ -89,7 +89,7 @@ Or you can sepecify these options on a specific element (they will override the 
 ## Test
 First, install dependencies, then run karma :
 ```shell
-npm install
+yarn // npm install
 ```
 You can then run test either with karma or through gulp :
 ```shell
@@ -102,7 +102,7 @@ gulp test
 ## Build
 Install dependencies and run build :
 ```shell
-npm install
+yarn // npm install
 gulp build
 ```
 Files are output in `dist/` :
@@ -113,7 +113,7 @@ Files are output in `dist/` :
 ## Gulp watch
 A gulp watch task is also available, running both test and build tasks
 ```shell
-guild watch
+gulp watch
 ```
 
 
