@@ -20,7 +20,7 @@
     "url": "https://github.com/e-krebs/rome-angular"
   },
   "dependencies": {
-    "angular": "^1.7.9",
+    "angular": "^1.8.0",
     "moment": "^2.24.0",
     "rome": "^3.0.0"
   },
