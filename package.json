@@ -49,6 +49,7 @@
     "gulp-ng-annotate/**/minimist": "^1.2.2",
     "gulp/**/minimist": "^1.2.2",
     "karma/**/minimist": "^1.2.2",
+    "gulp/**/yargs-parser": "^13.1.2",
     "gulp/**/kind-of": "^6.0.3",
     "gulp-ng-annotate/**/kind-of": "^6.0.3"
   }
